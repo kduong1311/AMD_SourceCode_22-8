@@ -1,0 +1,71 @@
+﻿{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:8888"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/shorten",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/shorten",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ]
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ]
+    },
+
+    {
+      "UpstreamPathTemplate": "/gateway/getUrl",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/getUrl",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/check",
+      "UpstreamHttpMethod": [ "post" ],
+      "DownstreamPathTemplate": "/check",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    }
+  ]
+}
